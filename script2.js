@@ -265,7 +265,7 @@ function playerTurn(){
         return;
     }
     turn=1
-    document.getElementById('display').innerHTML = 'Player 1 Turn';
+    document.getElementById('display').innerHTML = 'Your Turn';
     return;
 }
 
@@ -294,8 +294,8 @@ function Disable(choice){
     document.getElementById('next').style.backgroundColor = 'red';
 
     if(choice==0){
-        if(turn == 1) return document.getElementById('score').innerHTML = 'Player1<'+ ++score[0] +'> Player2<'+ score[1] +'>';
-        return document.getElementById('score').innerHTML = 'Player1<'+ score[0] +'> Player2<'+ ++score[1] +'>';
+        if(turn == 1) return document.getElementById('score').innerHTML = 'You<'+ ++score[0] +'> Computer<'+ score[1] +'>';
+        return document.getElementById('score').innerHTML = 'You<'+ score[0] +'> Computer<'+ ++score[1] +'>';
     }
 }
 
@@ -318,7 +318,7 @@ function reset(choice){
     }
 
     if(choice == 1){
-        document.getElementById('score').innerHTML = 'Player1<0> Player2<0>';
+        document.getElementById('score').innerHTML = 'You<0> Computer<0>';
         score = [0,0];
         turn = 2;
         position = 1;
